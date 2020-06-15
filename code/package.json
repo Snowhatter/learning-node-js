@@ -9,6 +9,7 @@
   "author": "Arjun Krishnamurthy",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^4.1.0",
     "validator": "^10.8.0"
   }
 }
