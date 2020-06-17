@@ -16,7 +16,7 @@ msg = chalk.italic('Success!')
 
 console.log(msg)
 
-console.log(chalk.blue.bold('Hello world!'));
+console.log(chalk.blue.italic('Hello world!'));
 
 console.log(process.argv)
 
