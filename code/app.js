@@ -7,18 +7,18 @@ const yargs = require('yargs')
 
 // const name = 'Arjun'
 // const sum = addthings(2,4)
-const note = takeNotes()
+// const note = takeNotes()
 
-console.log(note)
-console.log(validator.isURL('monkey'))
+// console.log(note)
+// console.log(validator.isURL('monkey'))
 
-msg = chalk.italic('Success!')
+// msg = chalk.italic('Success!')
 
-console.log(msg)
+// console.log(msg)
 
-console.log(chalk.blue.italic('Hello world!'));
+// console.log(chalk.blue.italic('Hello world!'));
 
-console.log(process.argv)
+// console.log(process.argv)
 
 // command = process.argv[2]
 
@@ -35,6 +35,16 @@ yargs.version('1.1.0')
 yargs.command({
     command:'add',
     describe:'Add a new note',
+    builder:{
+        title:{
+            describe: 'Note Title' 
+        },
+        body:{
+            describe: 'Note Body',
+            demandOption: 'true',
+            type:'string'
+        }
+    },
     handler:function(){
         console.log('Adding a new note')
     }
@@ -76,5 +86,5 @@ yargs.command({
     }
 })
 
-yargs.parse()
-//console.log(yargs.argv)
+//yargs.parse()
+console.log(yargs.argv)
